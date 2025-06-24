@@ -1,0 +1,13 @@
+# frontend-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: movie-ui-service
+  namespace: kubeflix
+spec:
+  selector:
+    app: movie-ui
+  ports:
+    - port: 80
+      targetPort: 80
+  type: NodePort
