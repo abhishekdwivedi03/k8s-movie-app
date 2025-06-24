@@ -1,0 +1,13 @@
+# backend-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: movie-api-service
+  namespace: kubeflix
+spec:
+  selector:
+    app: movie-api
+  ports:
+    - port: 80
+      targetPort: 80
+  type: ClusterIP

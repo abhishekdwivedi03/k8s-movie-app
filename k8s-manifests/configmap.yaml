@@ -1,0 +1,8 @@
+# configmap.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: movie-config
+  namespace: kubeflix
+data:
+  API_URL: "http://movie-api-service:80"
